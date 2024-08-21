@@ -16,78 +16,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight"
         tools:targetApi="31">
-        <service android:name=".MusicService" />
-        <activity
-            android:name=".replaceFragment"
-            android:exported="false" />
-        <activity
-            android:name=".ZoomOutPageTransformer"
-            android:exported="false" />
+
         <activity
             android:name=".item_song"
             android:exported="false" />
-        <activity
-            android:name=".SongAdapter"
-            android:exported="false" />
+
         <activity
             android:name=".CancionesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CancionesAdapter"
-            android:exported="false" />
-        <activity
-            android:name=".Cancion"
-            android:exported="false" />
-        <activity
-            android:name=".item_cancion"
             android:exported="false" />
         <activity
             android:name=".item_album_art"
             android:exported="false" />
         <activity
-            android:name=".Artista"
-            android:exported="false" />
-        <activity
             android:name=".item_artist"
             android:exported="false" />
-        <activity
-            android:name=".ArtistAdapter"
-            android:exported="false" />
-        <activity
-            android:name=".getLocalMusicArtists"
-            android:exported="false" />
-        <activity
-            android:name=".fragment_canciones"
-            android:exported="false" />
-        <activity
-            android:name=".MediaUtils"
-            android:exported="false" />
-        <activity
-            android:name=".CancionesFragment"
-            android:exported="false" />
-        <activity
-            android:name=".Item_artista"
-            android:exported="false" />
-        <activity
-            android:name=".ArtistaAdapter"
-            android:exported="false" />
-        <activity
-            android:name=".FavoriteApi"
-            android:exported="false" />
+
         <activity
             android:name=".ReproductorMusicaGrande"
             android:exported="false" />
         <activity
-            android:name=".ReproductorFragment"
-            android:exported="false" />
-        <activity
-            android:name=".FavoritesAdapterr"
-            android:exported="false" />
-        <activity
             android:name=".Item_favorite_song"
-            android:exported="false" />
-        <activity
-            android:name=".MusicPlayerManager"
             android:exported="false" />
         <activity
             android:name=".item_music"
@@ -97,9 +45,6 @@
             android:exported="false" />
         <activity
             android:name=".OnMusicSelectedListener"
-            android:exported="false" />
-        <activity
-            android:name=".OnItemClickListener"
             android:exported="false" />
         <activity
             android:name=".MusicFile"
@@ -153,6 +98,7 @@
             android:screenOrientation="portrait">
             <!-- otras configuraciones -->
         />
+
 
 
 
