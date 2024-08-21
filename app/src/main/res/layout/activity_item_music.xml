@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:padding="10dp"
+    android:background="@drawable/card_background"
+    android:elevation="4dp"
+    >
+
+<ImageView
+android:id="@+id/album_art"
+android:layout_width="50dp"
+android:layout_height="50dp"
+android:scaleType="centerCrop"
+android:src="@drawable/placeholder_album_art"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintBottom_toBottomOf="parent" />
+
+<TextView
+android:id="@+id/title_text_view"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:ellipsize="end"
+android:maxLines="1"
+android:text="Cancion"
+android:textSize="18sp"
+android:layout_marginStart="10dp"
+android:layout_marginEnd="10dp"
+app:layout_constraintStart_toEndOf="@+id/album_art"
+app:layout_constraintTop_toTopOf="@+id/album_art"
+app:layout_constraintEnd_toStartOf="@+id/duration_text_view"
+app:layout_constraintHorizontal_weight="1"
+tools:layout_editor_absoluteY="5dp" />
+
+<TextView
+android:id="@+id/artist_text_view"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:ellipsize="end"
+android:maxLines="1"
+android:text="Artista"
+android:textSize="14sp"
+android:layout_marginStart="10dp"
+android:layout_marginEnd="10dp"
+app:layout_constraintStart_toEndOf="@+id/album_art"
+app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+app:layout_constraintEnd_toStartOf="@+id/duration_text_view"
+app:layout_constraintHorizontal_weight="1"
+tools:layout_editor_absoluteY="5dp" />
+
+<TextView
+android:id="@+id/duration_text_view"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="00:00"
+android:textColor="@android:color/black"
+android:textSize="14sp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintBottom_toBottomOf="parent"
+tools:layout_editor_absoluteY="16dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

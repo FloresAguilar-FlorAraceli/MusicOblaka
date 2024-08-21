@@ -1,0 +1,150 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Imagen del álbum -->
+    <ImageView
+        android:id="@+id/album_art"
+        android:layout_marginTop="50dp"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_album_art"
+        app:layout_constraintBottom_toTopOf="@+id/song_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="4dp"/>
+
+    <!-- Título de la canción -->
+    <TextView
+        android:id="@+id/song_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Song Title"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/song_artist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/album_art" />
+
+    <!-- Artista de la canción -->
+    <TextView
+        android:id="@+id/song_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Artist Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song_title" />
+
+    <!-- Controles de reproducción -->
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song_artist">
+
+        <SeekBar
+            android:id="@+id/song_progress"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="5dp"
+            android:thumbTint="#E91E63"
+            android:progressTint="#F3C2FF" />
+
+        <TextView
+            android:id="@+id/song_elapsed_time"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <ImageButton
+            android:id="@+id/random_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/random"
+            android:src="@drawable/ic_random"
+            android:layout_marginEnd="10dp"
+            app:tint="#EA99B5"/>
+
+        <ImageButton
+            android:id="@+id/previous_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/previous"
+            android:src="@drawable/ic_previous"
+            android:layout_marginEnd="10dp"
+            app:tint="#EA99B5"/>
+
+        <ImageButton
+            android:id="@+id/play_pause_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/play_pause"
+            android:src="@drawable/ic_play"
+            android:layout_marginEnd="10dp"
+            app:tint="#EA99B5" />
+
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/next"
+            android:src="@drawable/ic_next"
+            android:layout_marginEnd="10dp"
+            app:tint="#EA99B5"/>
+
+        <ImageButton
+            android:id="@+id/repeat_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/repeat"
+            android:src="@drawable/ic_repeat"
+            app:tint="#EA99B5"/>
+    </LinearLayout>
+
+    <!-- Botón de favoritos en la esquina superior derecha -->
+    <ImageButton
+        android:id="@+id/favorites_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/favorites"
+        android:src="@drawable/ic_favorite2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

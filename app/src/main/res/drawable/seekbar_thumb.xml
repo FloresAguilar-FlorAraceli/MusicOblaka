@@ -1,0 +1,6 @@
+<!-- res/drawable/seekbar_thumb.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#78a3eb" /> <!-- Color del circulito -->
+    <size android:width="15dp" android:height="15dp" /> <!-- Tamaño del circulito -->
+    <corners android:radius="10dp" /> <!-- Bordes redondeados para hacer el circulito -->
+</shape>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight"
+        tools:targetApi="31">
+        <service android:name=".MusicService" />
+        <activity
+            android:name=".replaceFragment"
+            android:exported="false" />
+        <activity
+            android:name=".ZoomOutPageTransformer"
+            android:exported="false" />
+        <activity
+            android:name=".item_song"
+            android:exported="false" />
+        <activity
+            android:name=".SongAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".CancionesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CancionesAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".Cancion"
+            android:exported="false" />
+        <activity
+            android:name=".item_cancion"
+            android:exported="false" />
+        <activity
+            android:name=".item_album_art"
+            android:exported="false" />
+        <activity
+            android:name=".Artista"
+            android:exported="false" />
+        <activity
+            android:name=".item_artist"
+            android:exported="false" />
+        <activity
+            android:name=".ArtistAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".getLocalMusicArtists"
+            android:exported="false" />
+        <activity
+            android:name=".fragment_canciones"
+            android:exported="false" />
+        <activity
+            android:name=".MediaUtils"
+            android:exported="false" />
+        <activity
+            android:name=".CancionesFragment"
+            android:exported="false" />
+        <activity
+            android:name=".Item_artista"
+            android:exported="false" />
+        <activity
+            android:name=".ArtistaAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".FavoriteApi"
+            android:exported="false" />
+        <activity
+            android:name=".ReproductorMusicaGrande"
+            android:exported="false" />
+        <activity
+            android:name=".ReproductorFragment"
+            android:exported="false" />
+        <activity
+            android:name=".FavoritesAdapterr"
+            android:exported="false" />
+        <activity
+            android:name=".Item_favorite_song"
+            android:exported="false" />
+        <activity
+            android:name=".MusicPlayerManager"
+            android:exported="false" />
+        <activity
+            android:name=".item_music"
+            android:exported="false" />
+        <activity
+            android:name=".SongClickListener"
+            android:exported="false" />
+        <activity
+            android:name=".OnMusicSelectedListener"
+            android:exported="false" />
+        <activity
+            android:name=".OnItemClickListener"
+            android:exported="false" />
+        <activity
+            android:name=".MusicFile"
+            android:exported="false" />
+        <activity
+            android:name=".MusicAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".MainViewPagerAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".GenerosFragment"
+            android:exported="false" />
+        <activity
+            android:name=".FavoritosFragment"
+            android:exported="false" />
+        <activity
+            android:name=".ListaReproduccionFragment"
+            android:exported="false" />
+        <activity
+            android:name=".InicioFragment"
+            android:exported="false" />
+        <activity
+            android:name=".DownloadUtil"
+            android:exported="false" />
+        <activity
+            android:name=".Song"
+            android:exported="false" />
+        <activity
+            android:name=".SongRepository"
+            android:exported="false" />
+        <activity
+            android:name=".DatabaseHelper"
+            android:exported="false" />
+        <activity
+            android:name=".Settings"
+            android:exported="false" />
+        <activity
+            android:name=".Genres"
+            android:exported="false" />
+        <activity
+            android:name=".Favorites"
+            android:exported="false" />
+        <activity
+            android:name=".Playlist"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait">
+            <!-- otras configuraciones -->
+        />
+
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

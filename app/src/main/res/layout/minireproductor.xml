@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:background="@drawable/background_shape"
+    android:padding="5dp"
+    android:elevation="8dp">
+
+    <!-- Botón de Favoritos -->
+    <ImageButton
+        android:id="@+id/favorites_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:contentDescription="@string/favorites"
+        android:src="@drawable/ic_favorite2"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+    <!-- Título de la Canción -->
+    <TextView
+        android:id="@+id/song_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:text="Song Title"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <!-- Artista de la Canción -->
+    <TextView
+        android:id="@+id/song_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text="Song Artist"
+        android:textColor="#8CA6A6"
+        android:textSize="13sp" />
+
+    <!-- Tiempo Transcurrido -->
+    <TextView
+        android:id="@+id/song_elapsed_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="00:00"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_gravity="center_vertical"
+        />
+
+    <!-- Layout con la carátula del álbum, barra de progreso y tiempo -->
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/song_artist"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Imagen del álbum -->
+        <ImageView
+            android:id="@+id/album_art"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/placeholder_album_art"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="5dp"
+            android:scaleType="centerCrop" />
+
+        <!-- Barra de Progreso -->
+        <SeekBar
+            android:id="@+id/song_progress"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="5dp"
+            android:thumbTint="#E91E63"
+            android:progressTint="#F3C2FF" />
+
+        <!-- Botón de Play/Pause -->
+        <ImageButton
+            android:id="@+id/play_pause_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+<LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="1dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/random_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/random"
+            android:background="#00FFFFFF" />
+
+        <ImageButton
+            android:id="@+id/previous_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/previous"
+            android:background="#00FFFFFF" />
+
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/next"
+            android:background="#00FFFFFF" />
+
+        <ImageButton
+            android:id="@+id/repeat_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/repeat"
+            android:background="#00FFFFFF" />
+    </LinearLayout>
+</RelativeLayout>
